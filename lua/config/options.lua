@@ -35,6 +35,8 @@ vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 
+vim.g.lazyvim_picker = "telescope"
+
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
 

@@ -30,6 +30,10 @@ return {
         "gomod",
         "gowork",
         "gosum",
+        "svelte",
+        "astro",
+        "css",
+        "python",
       })
     end,
   },
