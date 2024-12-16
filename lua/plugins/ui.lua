@@ -90,4 +90,15 @@ return {
     },
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
+  -- Snack config
+  {
+    "folke/snacks.nvim",
+    opts = {
+      indent = {
+        animate = {
+          enabled = false,
+        },
+      },
+    },
+  },
 }
