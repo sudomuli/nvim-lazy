@@ -1,24 +1,4 @@
 return {
-  -- {
-  --   "nvim-telescope/telescope.nvim",
-  --   keys = {
-  --     -- add a keymap to browse plugin files
-  --     -- stylua: ignore
-  --     {
-  --       "<leader>fp",
-  --       function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
-  --       desc = "Find Plugin File",
-  --     },
-  --   },
-  --   opts = {
-  --     defaults = {
-  --       layout_strategy = "horizontal",
-  --       layout_config = { prompt_position = "top" },
-  --       sorting_strategy = "ascending",
-  --       winblend = 0,
-  --     },
-  --   },
-  -- },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
@@ -35,6 +15,33 @@ return {
         "css",
         "python",
       })
+    end,
+  },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = function()
+      local harpoon = require("harpoon")
+
+      -- REQUIRED
+      harpoon:setup()
+      -- REQUIRED
+
+      vim.keymap.set("n", "<leader>a", function()
+        harpoon:list():add()
+      end)
+      vim.keymap.set("n", "<C-e>", function()
+        harpoon.ui:toggle_quick_menu(harpoon:list())
+      end)
+
+      -- Toggle previous & next buffers stored within Harpoon list
+      vim.keymap.set("n", "<C-S-P>", function()
+        harpoon:list():prev()
+      end)
+      vim.keymap.set("n", "<C-S-N>", function()
+        harpoon:list():next()
+      end)
     end,
   },
 }
