@@ -38,6 +38,10 @@ vim.opt.mouse = ""
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
 
+-- Use Snacks picker
+vim.g.lazyvim_picker = "snacks"
+vim.ui.select = "snacks"
+
 if vim.fn.has("nvim-0.8") == 1 then
   vim.opt.cmdheight = 0
 end

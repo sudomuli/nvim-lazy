@@ -93,6 +93,8 @@ return {
   -- Snack config
   {
     "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
     opts = {
       indent = {
         animate = {
