@@ -12,8 +12,11 @@ return {
         "gosum",
         "svelte",
         "astro",
+        "vue",
         "css",
         "python",
+        "dockerfile",
+        "sql",
       })
     end,
   },
