@@ -97,7 +97,13 @@ return {
     lazy = false,
     ---@type snacks.Config
     opts = {
+      scroll = {
+        enabled = false,
+      },
       image = { enabled = true },
+      animate = {
+        enabled = false,
+      },
       indent = {
         enabled = true,
         animate = {
